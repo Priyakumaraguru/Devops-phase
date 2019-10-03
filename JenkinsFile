@@ -1,0 +1,32 @@
+pipeline
+{
+    agent any
+    
+    
+    stages {
+        stage('Checkout')
+        {
+            steps{
+                git 'https://github.com/Dharanidharkrish/Devops-phase.git'
+            }
+        }
+        
+        stage('Build')
+        {
+            steps{
+                withMaven(maven : 'Maven'){
+                    sh 'mvn clean compile'
+                }
+            }
+        }
+        
+        stage('Test')
+        {
+            steps{
+                withMaven(maven : 'Maven'){
+                    sh 'mvn test'
+                }
+            }
+        }
+    }
+}
