@@ -2,22 +2,16 @@ pipeline
 {
     agent any
     
-    
-    stages {
-        stage('Checkout')
-        {
-            steps{
-                git 'https://github.com/Dharanidharkrish/Devops-phase.git'
-            }
-        }
-        
-        stage('Build')
-        {
-            steps{
-               sh 'mvn clean install build'
-                }
-            }
-        }
-        
+    tools{
+    maven 'Maven'
     }
+    
+   stages{
+    stage('Build')
+        {
+            steps{
+              sh 'mvn clean install'
+                 }
+         }
+     }
 }
