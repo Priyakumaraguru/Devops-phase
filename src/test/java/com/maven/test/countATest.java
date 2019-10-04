@@ -9,8 +9,8 @@ public class countATest {
 	@Test
 	public void test() {
 		JunitTesting test = new JunitTesting();
-		int output= test.countA("alphabet");
-		assertEquals(2,output);
+		int output= test.countA("CodeKillers");
+		assertEquals(11,output);
 	}
 
 }
