@@ -25,8 +25,7 @@ pipeline
     stage('Nexus')
     {
      steps{
-     nexusPublisher nexusInstanceId: 'CNexus', nexusRepositoryId: 'devopstraining', packages: [[$class: 'MavenPackage', mavenAssetList: [], mavenCoordinate: [artifactId: 'test', groupId: 'com.maven', packaging: 'jar', version: '0.0.1-SNAPSHOT']]]
-        }
+     nexusPublisher nexusInstanceId: 'CNexus', nexusRepositoryId: 'devopstraining', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: '/var/lib/jenkins/.m2/repository/com/maven/test/0.0.1-SNAPSHOT/test-0.0.1-SNAPSHOT.jar']], mavenCoordinate: [artifactId: 'test', groupId: 'com.maven', packaging: 'jar', version: '0.0.1-SNAPSHOT']]]    }
     }
    
     
