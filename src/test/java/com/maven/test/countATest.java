@@ -9,7 +9,7 @@ public class countATest {
 	@Test
 	public void test() {
 		JunitTesting test = new JunitTesting();
-		int output= test.countA("alphabeta");
+		int output= test.countA("aaab");
 		assertEquals(3,output);
 	}
 
