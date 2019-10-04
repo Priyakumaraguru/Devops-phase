@@ -1,9 +1,19 @@
 package com.maven.test;
-import java.lang.*;
 
 public class JunitTesting {
-        public double power(double x,double y)
+        public int square(int x)
         {
-        	return Math.pow(x,y);
+        	return x*x;
+        }
+        public int countA(String word)
+        {
+        	int count=0;
+        	for(int i=0;i<word.length();i++){
+        		if(word.charAt(i)=='a' || word.charAt(i)=='A')
+        		{
+        			count++;
+        		}
+        	}
+        	return count;
         }
 }
