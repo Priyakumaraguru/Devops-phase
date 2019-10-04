@@ -6,9 +6,4 @@ public class JunitTesting {
         {
         	return Math.pow(x,y);
         }
-        public int countA(String word)
-        {
-        
-        	return word.length();
-        }
 }
