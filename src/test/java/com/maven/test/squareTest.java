@@ -9,8 +9,8 @@ public class squareTest {
 	@Test
 	public void test() {
 		JunitTesting test=new JunitTesting();
-		int output =test.square(5);
-		assertEquals(25,output);
+		int output =test.power(2,3);
+		assertEquals(8,output);
 	}
 
 }
